@@ -1,0 +1,65 @@
+.draft-layout {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 20px;
+}
+
+h1 {
+  grid-column: 1 / span 2;
+  text-align: center;
+}
+
+.champion-row {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.champion-portrait {
+  background-color: gray;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+}
+
+.left-panel,
+.right-panel {
+  border: 2px solid gray;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.champion-bio,
+.champion-strengths,
+.champion-weaknesses,
+.champion-recommendations,
+.draft-board {
+  border: 1px solid gray;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px;
+}
+
+.bottom-panel {
+  border: 2px solid gray;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.team-strengths,
+.team-weaknesses,
+.team-strategy {
+  border: 1px solid gray;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.bottom-panel,
+.team-strategy {
+  grid-column: 1 / span 2;
+}
