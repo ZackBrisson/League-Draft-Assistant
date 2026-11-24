@@ -1,5 +1,5 @@
 import { useState } from 'react'
-function ChampionSlot({ role, champions, onSelect }) {
+function ChampionSlot({ role, champions, onSelect, onTeamUpdate}) {
   const [selectedChampion, setSelectedChampion] = useState("")
   const championData = champions.find(
   (champion) => champion.name === selectedChampion
@@ -22,6 +22,7 @@ function ChampionSlot({ role, champions, onSelect }) {
   onChange={(event) => {
     setSelectedChampion(event.target.value)
     onSelect(event.target.value)
+    onTeamUpdate(role, event.target.value)
   }}
 >
   <option value="">Select Champion</option>
